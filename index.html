@@ -63,9 +63,6 @@
     
 </head>
 <body>
-    <form id="form">
-        <button id="test">PRESS ME</button>
-    </form>
     <div id="image1">
         <img src="mario.png" alt="Марио" class="image-container">
     </div>
@@ -82,9 +79,9 @@
         
         tg.expand();
         char.addEventListener("click", () => {
-            alert("Это всплывающее сообщение!");
+            
             let data = {
-            imageId: "imageId"
+            char: "mario"
             };
             tg.sendData(JSON.stringify(data));
             tg.close();
