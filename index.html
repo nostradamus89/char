@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Моя тестовая страница</title>
+    <title>Моя страница</title>
+    <style>
+        body {
+            background: #F5F5F5;
+            opacity: 1;
+            margin: 0;
+            height: 1920px;
+            width: 1080px;
+            position: relative;
+        }
+        .image-container {
+            position: absolute;
+            width: 392px;
+            height: 392px;
+            box-shadow: 0px 15px 15px #00000029;
+            border: 3px solid #27A7E7;
+            border-radius: 50px;
+            opacity: 1;
+        }
+        #image1 {
+            top: 383px;
+            left: 344px;
+            background: transparent url('img/mario.png') 0% 0% no-repeat padding-box;
+        }
+        #image2 {
+            top: 1024px;
+            left: 344px;
+            background: transparent url('img/albert.png') 0% 0% no-repeat padding-box;
+        }
+    </style>
 </head>
 <body>
-    <h1>Привет, мир!</h1>
-    <p>Это моя тестовая веб-страница.</p>
+    <div id="image1" class="image-container">
+        <p>Подпись к первому изображению</p>
+    </div>
+    <div id="image2" class="image-container">
+        <p>Подпись ко второму изображению</p>
+    </div>
 </body>
 </html>
