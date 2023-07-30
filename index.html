@@ -58,26 +58,23 @@
     </style>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        function onImageClick(imageId) {
-            let tg = window.Telegram.WebApp;
-            let char = document.getElementById("image1")
-            
-            tg.expand();
-            char.addEventListener("click", () => {
-                let data = {
-                imageId: imageId
-                };
-            });
-                    
-            tg.sendData(JSON.stringify(data));
-            tg.close();
-            
-        }
+        let tg = window.Telegram.WebApp;
+        let char = document.getElementById("image1")
+        
+        tg.expand();
+        char.addEventListener("click", () => {
+            let data = {
+            imageId: imageId
+            };
+        });
+                
+        tg.sendData(JSON.stringify(data));
+        tg.close();
     </script>
 </head>
 <body>
-    <div onclick="onImageClick('mario')">
-        <img id="image1" src="mario.png" alt="Марио" class="image-container">
+    <div id="image1">
+        <img src="mario.png" alt="Марио" class="image-container">
     </div>
     <div id="caption1" class="caption">Марио</div>
     <div id="caption2" class="caption">Персонаж</div>
