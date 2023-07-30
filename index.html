@@ -7,9 +7,10 @@
             background: #F5F5F5;
             opacity: 1;
             margin: 0;
-            height: 640px;
-            width: 480px;
+            height: 1920px;
+            width: 1080px;
             position: relative;
+            font-family: 'SF Pro', sans-serif;
         }
         .image-container {
             position: absolute;
@@ -23,21 +24,44 @@
         #image1 {
             top: 383px;
             left: 344px;
-            background: transparent url('mario.png') 0% 0% no-repeat padding-box;
+            background: transparent url('img/mario.png') 0% 0% no-repeat padding-box;
         }
         #image2 {
             top: 1024px;
             left: 344px;
-            background: transparent url('einstain.png') 0% 0% no-repeat padding-box;
+            background: transparent url('img/albert.png') 0% 0% no-repeat padding-box;
+        }
+        .caption {
+            position: absolute;
+            text-align: left;
+            letter-spacing: 0px;
+            color: #27A7E7;
+            opacity: 1;
+        }
+        #caption1 {
+            top: 800px;
+            left: 475px;
+            width: 130px;
+            height: 48px;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 48px;
+        }
+        #caption2 {
+            top: 848px;
+            left: 448px;
+            width: 184px;
+            height: 48px;
+            font-weight: 300;
+            font-size: 40px;
+            line-height: 48px;
         }
     </style>
 </head>
 <body>
-    <div id="image1" class="image-container">
-        <p>Подпись к первому изображению</p>
-    </div>
-    <div id="image2" class="image-container">
-        <p>Подпись ко второму изображению</p>
-    </div>
+    <div id="image1" class="image-container"></div>
+    <div id="caption1" class="caption">Марио</div>
+    <div id="caption2" class="caption">Персонаж</div>
+    <div id="image2" class="image-container"></div>
 </body>
 </html>
