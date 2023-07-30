@@ -63,7 +63,9 @@
     
 </head>
 <body>
-    <button id="test">PRESS ME</button>
+    <form id="form">
+        <button id="test">PRESS ME</button>
+    </form>>
     <div id="image1">
         <img src="mario.png" alt="Марио" class="image-container">
     </div>
@@ -76,7 +78,7 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp;
-        let char = document.getElementById("test")
+        let char = document.getElementById("test");
         
         tg.expand();
         char.addEventListener("click", () => {
