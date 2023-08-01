@@ -18,7 +18,7 @@
         }
         .image-container {
             position: relative;
-            width: 98%;
+            width: 58%;
             height: auto;
             box-shadow: 0px 15px 15px #00000029;
             border: 3px solid #27A7E7;
@@ -26,8 +26,22 @@
             opacity: 1;
         }
         .image-container img {
-            width: 98%;
+            width: 58%;
             height: auto;
+        }
+        .image-wrapper1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .image-wrapper2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
         }
         .caption {
             position: relative;
@@ -38,19 +52,19 @@
             width: 100%;
         }
         #caption1, #caption3 {
-            font-size: 7vw;
-            line-height: 8vw;
+            font-size: 6vw;
+            line-height: 7vw;
             font-weight: bold;
         }
         #caption4 {
-            font-size: 7vw;
-            line-height: 8vw;
+            font-size: 6vw;
+            line-height: 7vw;
             margin-bottom: 30px;
         }
         #caption2 {
             font-size: 7vw;
             line-height: 8vw;
-            margin-bottom: 150px;
+            margin-bottom: 110px;
         }
         .image-container:hover {
             cursor: pointer;
@@ -63,19 +77,20 @@
     
 </head>
 <body>
-    <div id="image1" onclick="onImageClick('mario')">
-        <img src="mario.png" alt="Марио" class="image-container">
+    <div class="image-wrapper1">
+        <img src="mario.png" alt="Марио" class="image-container" onclick="onImageClick('mario')">
+        <div id="caption1" class="caption">Марио</div>
+        <div id="caption2" class="caption">Персонаж</div>
     </div>
-    <div id="caption1" class="caption">Марио</div>
-    <div id="caption2" class="caption">Персонаж</div>
-    <img src="albert.png" alt="Альберт Эйнштейн" class="image-container" onclick="onImageClick('albert')">
-    <div id="caption3" class="caption">Альберт Эйнштейн</div>
-    <div id="caption4" class="caption">Физик-теоретик</div>
+    <div class="image-wrapper2">
+        <img src="albert.png" alt="Альберт Эйнштейн" class="image-container" onclick="onImageClick('albert')">
+        <div id="caption3" class="caption">Альберт Эйнштейн</div>
+        <div id="caption4" class="caption">Физик-теоретик</div>
+    </div>
     
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp;
-        //let char = document.getElementById("image1");
         
         tg.expand();
         function onImageClick(imageId) {
@@ -85,16 +100,6 @@
             tg.sendData(JSON.stringify(data));
             tg.close();
         }
-        /*char.addEventListener("click", () => {
-            
-            let data = {
-            char: "mario"
-            };
-            tg.sendData(JSON.stringify(data));
-            tg.close();
-        });*/
-                
-        
     </script>
 </body>
 </html>
